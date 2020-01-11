@@ -172,7 +172,7 @@ public class QueryUtils {
                 Date dateTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(currentNews.getString("webPublicationDate"));
 
                 // Extract the value for the key called "webUrl"
-                String authorName = (currentNews.getString("author") != null) ? currentNews.getString("author") : "No author name.";
+                String authorName = (currentNews.has("author")) ? currentNews.getString("author") : "No author name.";
 
                 // Extract the value for the key called "webUrl"
                 String url = currentNews.getString("webUrl");
